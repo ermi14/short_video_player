@@ -25,6 +25,7 @@ class ApiBaseHelper {
           RequestOptions requestOptions,
           RequestInterceptorHandler handler,
         ) async {
+          requestOptions.headers['Content-Type'] = 'application/x-www-form-urlencoded';
           return handler.next(requestOptions);
         }, onError: (DioError error, handler) async {
           return handler.next(error);
@@ -34,15 +35,6 @@ class ApiBaseHelper {
 
   static final dio = createDio();
   static final baseAPI = addInterceptors(dio);
-
-  Future<Response> getHTTP(String url) async {
-    try {
-      Response response = await baseAPI.get(url);
-      return response;
-    } on DioError catch (e) {
-      throw NetworkException(e.toString());
-    }
-  }
 
   Future<Response> postHTTP(String url, dynamic data) async {
     try {
