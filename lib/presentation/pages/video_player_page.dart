@@ -29,7 +29,7 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Videos App'),
+        title: const Text('PushIt Test'),
       ),
       body: Consumer<VideosProvider>(
         builder: (context, value, child) {
@@ -45,9 +45,6 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
             /// Pass the [VideoModel] for every page by using their index
             return Scrollbar(
               controller: _pageController,
-              thumbVisibility: true,
-              thickness: 20,
-              interactive: true,
               child: PageView.builder(
                 controller: _pageController,
                 scrollDirection: Axis.vertical,

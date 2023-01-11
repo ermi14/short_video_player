@@ -39,6 +39,10 @@ class Themes {
     ),
     scrollbarTheme: ScrollbarThemeData(
       thumbColor: MaterialStateProperty.all(kSecondaryColor),
+      radius: const Radius.circular(16),
+      thumbVisibility: MaterialStateProperty.all(true),
+      thickness: MaterialStateProperty.all(22),
+      interactive: true,
     ),
   );
 }

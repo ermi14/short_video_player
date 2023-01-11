@@ -12,7 +12,7 @@ class EntrancePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Videos App'),
+        title: const Text('PushIt Test'),
       ),
       body: DecoratedBox(
         decoration: const BoxDecoration(
